@@ -1,0 +1,7 @@
+actor_rollout_ref:
+  actor:
+    self_distillation:
+      use_dataset_expert_answer: True
+      expert_answer_column: answer
+      expert_answer_template: |-
+        {expert_answer}

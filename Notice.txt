@@ -1,0 +1,11 @@
+Copyright 2023-2024 Bytedance Ltd. and/or its affiliates
+
+This product includes software developed at Bytedance Ltd. (verl,
+https://github.com/volcengine/verl), licensed under the Apache License 2.0.
+
+It further includes the SDPO self-distillation implementation from
+https://github.com/lasgroup/SDPO.
+
+The constitutional-AI training path (verl/trainer/config/sdpo_cai.yaml,
+verl/utils/reward_score/feedback/llm.py, experiments/constitutional_ai/) was
+added for the Apertus models by the Swiss AI Initiative.

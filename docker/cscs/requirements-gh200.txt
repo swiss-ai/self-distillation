@@ -1,0 +1,43 @@
+# Minimal top-level Python dependencies for verl on the GH200 vLLM base image.
+# Keep this file focused on packages verl imports directly; let pip resolve
+# transitive dependencies and let the NGC image provide the CUDA/vLLM stack.
+#
+# Already provided by the base image:
+#   - torch, torchvision
+#   - vllm
+#   - flash_attn, flashinfer-python, flashinfer-cubin
+#   - xformers, triton
+#   - cuda-bindings, cuda-python, cuda-pathfinder
+#   - nvidia-cudnn-frontend, nvidia-cutlass-dsl
+#
+# Installed separately from source:
+#   - verl
+#
+# Intentionally omitted:
+#   - numpy: setup.py asks for <2.0.0, but the previous GH200 environment pinned 2.1.0.
+#     Keep the base image's numpy unless you want to re-baseline the entire stack.
+
+accelerate==1.12.0
+codetiming==1.4.0
+datasets==4.4.2
+dill==0.4.0
+hydra-core==1.3.2
+nvidia-ml-py==13.590.44
+packaging==25.0
+pandas==2.3.3
+peft==0.18.0
+pyarrow==22.0.0
+pybind11==3.0.1
+pylatexenc==2.10
+ray[default]==2.53.0
+tensorboard==2.20.0
+tensordict==0.10.0
+torchdata==0.11.0
+transformers==4.57.1
+wandb==0.23.1
+
+# Optional repo features. Add only if you use them.
+math-verify==0.8.0
+latex2sympy2_extended==1.10.2
+mathruler
+# qwen-vl-utils
